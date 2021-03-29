@@ -1,0 +1,179 @@
+/* Task 1  */
+.fon {
+  width: 600px;
+  height: 560px;
+  background-color: #0d5825;
+  margin-bottom: 50px;
+}
+
+.fon_head {
+  font-size: 25px;
+  color: white;
+}
+
+.fon_head .p {
+  text-align: center;
+}
+
+.fon_head .p:first-child {
+  font-weight: bold;
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+
+.fon_head .p:nth-child(2) {
+  font-style: italic;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  /* position: relative; */
+  margin-top: 150px;
+}
+
+.card {
+  display: flex;
+  transform-origin: left bottom;
+  margin-left: -130px;
+  width: 150px;
+}
+
+.cards .card:first-child {
+  margin: 0;
+  transform: rotate(335deg);
+  top: 10px;
+  position: relative;
+}
+
+.cards .card:nth-child(2) {
+  transform: rotate(350deg);
+  top: 5px;
+  position: relative;
+}
+
+.cards .card:nth-child(3) {
+  transform: rotate(8deg);
+}
+
+.card:hover {
+  transform: rotate(30deg);
+}
+
+/* Task 2 */
+.kubes {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.kub1,
+.kub2,
+.kub3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.kub1 {
+  background-color: red;
+}
+
+.kub2 {
+  background-color: blue;
+
+  left: 60px;
+  top: 21%;
+  z-index: 2;
+}
+
+.kub3 {
+  background-color: green;
+
+  left: 120px;
+  top: 40%;
+}
+
+/* Task 3 */
+.menu {
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  height: 600px;
+  margin-bottom: 50px;
+}
+
+.menu_name {
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  font-size: 25px;
+  width: auto;
+  height: auto;
+  background-color: rgb(124, 122, 122);
+
+  top: 50%;
+  -webkit-transform: rotate(90deg) translateY(-50%);
+  transform: rotate(90deg) translateY(-50%);
+  right: -40px;
+
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+
+.menu_list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(124, 122, 122);
+
+  transform: translateX(-90%);
+  transition: transform 0.4s ease;
+}
+
+.menu_list:hover {
+  transform: translateX(0);
+}
+
+.menu_list:hover .menu_name {
+  opacity: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: orange;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  height: 200px;
+  text-transform: uppercase;
+  padding-left: 70px;
+  padding-top: 80px;
+}
+
+li {
+  position: relative;
+  list-style: none;
+  font-size: 20px;
+}
+
+li:before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  left: -30px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: orange;
+  border: 2px solid black;
+}

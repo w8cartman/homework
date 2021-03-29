@@ -1,0 +1,65 @@
+/* Task 1 */
+blockquote {
+  margin: 0;
+}
+
+blockquote p {
+  padding: 15px;
+  background: rgb(40, 4, 245);
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
+/* /Task 1 */
+
+/* Task 2 */
+a[href^='https://']
+{
+  color: rgb(255, 0, 0);
+}
+
+li:nth-child(4) {
+  background-color: chartreuse;
+}
+
+ul + p {
+  font-size: 26px;
+}
+/* /Task 2 */
+
+/* Task 3 */
+h3:nth-of-type(1) {
+  color: pink;
+}
+
+#greycol {
+  color: grey;
+}
+
+p:nth-last-of-type(2) {
+  color: green;
+}
+
+.text-box > div:nth-of-type(2) p {
+  color: red;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.bg-box {
+  background: green;
+  background-image: url(img/grass.png), url(img/lamp-png-0.png),
+    url(img/Ёжик.png), url(img/pon4ik.png), url(img/dom.jpg);
+  background-size: 250px, 60px, 40px, 50px, 700px;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y, no-repeat;
+  background-position: bottom, top, left, right, center;
+  height: 800px;
+}
