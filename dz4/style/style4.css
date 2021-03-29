@@ -30,6 +30,7 @@
   justify-content: center;
   /* position: relative; */
   margin-top: 150px;
+  transform: translateY(0);
 }
 
 .card {
@@ -56,8 +57,16 @@
   transform: rotate(8deg);
 }
 
-.card:hover {
-  transform: rotate(30deg);
+.cards .card1:hover {
+  transform: translate(-10px, -10px);
+}
+
+.cards .card2:hover {
+  transform: translate(-10px, -10px);
+}
+
+.cards .card3:hover {
+  transform: translate(-10px, -10px);
 }
 
 /* Task 2 */
@@ -171,7 +180,7 @@ li:before {
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
   left: -30px;
-  content: "";
+  content: '';
   width: 10px;
   height: 10px;
   background-color: orange;
