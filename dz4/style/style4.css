@@ -25,10 +25,11 @@
   font-style: italic;
 }
 
-.cards {
+/* another way to animation cards */
+
+/* .cards {
   display: flex;
   justify-content: center;
-  /* position: relative; */
   margin-top: 150px;
   transform: translateY(0);
 }
@@ -40,33 +41,81 @@
   width: 150px;
 }
 
-.cards .card:first-child {
+.card1 .card {
   margin: 0;
   transform: rotate(335deg);
   top: 10px;
   position: relative;
 }
 
-.cards .card:nth-child(2) {
+.card2 .card {
   transform: rotate(350deg);
   top: 5px;
   position: relative;
 }
 
-.cards .card:nth-child(3) {
+.card3 .card {
   transform: rotate(8deg);
 }
 
 .cards .card1:hover {
-  transform: translate(-10px, -10px);
+  transform: translateY(-10px);
 }
 
 .cards .card2:hover {
-  transform: translate(-10px, -10px);
+  transform: translateY(-10px);
 }
 
 .cards .card3:hover {
-  transform: translate(-10px, -10px);
+  transform: translateY(-10px);
+} */
+
+.cards {
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 160px;
+}
+
+.card1 {
+  width: 150px;
+  transform: rotate(-30deg);
+  right: 30%;
+  margin-right: -100px;
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+
+.card1:hover {
+  transform: translate(-30px, -20px) rotate(-30deg);
+}
+
+.card2 {
+  width: 150px;
+  height: 240px;
+  transform: rotate(-10deg);
+  right: 50%;
+  margin-right: -110px;
+  margin-bottom: 10px;
+  transition: 0.5s;
+
+  z-index: 1;
+}
+
+.card2:hover {
+  transform: translate(-15px, -20px) rotate(-10deg);
+}
+
+.card3 {
+  width: 150px;
+  height: 240px;
+  transform: rotate(10deg);
+  transition: 0.5s;
+
+  z-index: 2;
+}
+
+.card3:hover {
+  transform: translate(30px, -20px) rotate(10deg);
 }
 
 /* Task 2 */
@@ -185,4 +234,49 @@ li:before {
   height: 10px;
   background-color: orange;
   border: 2px solid black;
+}
+
+/* Task 4 */
+
+.animation {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.anim-box {
+  display: flex;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  animation-name: move;
+  animation-duration: 6s;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+    background-color: green;
+  }
+  25% {
+    /* left: 0; */
+    transform: translate(0, 200px);
+    background-color: hotpink;
+  }
+  50% {
+    transform: translate(200px, 200px);
+    background-color: blue;
+  }
+
+  75% {
+    transform: translate(200px, 0);
+    background-color: orange;
+  }
+  100% {
+    transform: translate(0, 0);
+    background-color: green;
+  }
 }
