@@ -253,7 +253,7 @@ li:before {
   animation-name: move;
   animation-duration: 6s;
   animation-timing-function: ease;
-  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
 @keyframes move {
