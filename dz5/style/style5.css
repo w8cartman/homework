@@ -50,55 +50,49 @@ a {
   text-decoration: none;
 }
 
-.content {
+.main {
   display: flex;
   flex-direction: row;
-  flex-flow: row wrap;
   text-align: center;
-  flex: 1 0 auto;
+  align-items: stretch;
+  height: 100%;
+  font-weight: 500;
 }
 
-.content > * {
-  padding: 10px;
-  flex: 1 100%;
+.content {
+  order: 2;
+}
+
+.content-top p:nth-of-type(1) {
+  margin: 20px;
+}
+
+.content-top p:nth-of-type(2) {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.aside {
+  max-width: 210px;
+  width: 100%;
+  padding-top: 10px;
 }
 
 .aside1 {
+  order: 1;
   background-color: rgb(219, 139, 243);
 }
 
 .aside2 {
+  order: 3;
   background-color: rgb(125, 160, 236);
-}
-
-@media all and (min-width: 480px) {
-  .aside {
-    flex: 1 0 0;
-  }
-}
-
-@media all and (min-width: 1024px) {
-  .main {
-    flex: 3;
-    order: 2;
-  }
-  .aside1 {
-    order: 1;
-    width: 50px;
-  }
-
-  .aside2 {
-    order: 3;
-  }
-}
-
-@media all and (min-width: 1200px) {
 }
 
 .footer {
   display: flex;
   justify-content: center;
   background-color: lightseagreen;
-  flex-shrink: 0;
   padding: 15px;
 }
