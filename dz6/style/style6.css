@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -182,7 +186,7 @@ body {
     padding: 10px 0px;
   }
 }
-/* END @media 320 */
+/* END @media 812 for burger menu */
 
 .content {
   order: 2;
@@ -208,24 +212,21 @@ body {
 
 .cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-evenly;
 }
 
 .cards__item {
-  display: block;
-  box-sizing: border-box;
-  min-height: 350px;
-  width: 31%;
-  min-width: 250px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 15px 10px 10px;
+  max-width: 600px;
   min-height: 400px;
-
   position: relative;
   border: 2px solid gray;
-  margin: 10px 0;
   border-radius: 25px;
-  padding: 15px;
-  text-align: center;
   transition: all 0.4s ease;
 }
 
@@ -359,7 +360,7 @@ body {
   }
 
   .cards__item {
-    min-width: 80%;
+    flex: 1 0 80%;
   }
 
   .aside {
@@ -388,7 +389,7 @@ body {
   }
 
   .cards__item {
-    min-width: 45%;
+    flex: 1 0 47%;
   }
 
   .aside {
@@ -416,7 +417,7 @@ body {
   }
 
   .cards__item {
-    min-width: 29%;
+    flex: 1 0 31%;
   }
 
   .aside {
