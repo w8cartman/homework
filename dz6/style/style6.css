@@ -4,6 +4,7 @@
 
 body {
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
   font-size: 16px;
   line-height: 1.2;
@@ -15,6 +16,7 @@ body {
 .header {
   position: fixed;
   width: 100%;
+  flex: 0 0 auto;
   top: 0;
   left: 0;
   z-index: 10;
@@ -74,21 +76,20 @@ body {
 
 .main {
   display: flex;
-  flex-direction: row;
   text-align: center;
-  align-items: stretch;
-  height: 100%;
+  flex: 1;
+
   font-weight: 500;
   padding-top: 80px;
 }
 
-@media (min-width: 320px) and (max-width: 812px) {
+@media (max-width: 812px) {
   body.lock {
     overflow: hidden;
   }
 
   .main {
-    display: flex;
+    /* display: flex; */
     padding-top: 59px;
   }
 
@@ -213,9 +214,11 @@ body {
 
 .cards__item {
   display: block;
-  height: 350px;
+  box-sizing: border-box;
+  min-height: 350px;
   width: 31%;
   min-width: 250px;
+  min-height: 400px;
 
   position: relative;
   border: 2px solid gray;
@@ -249,9 +252,8 @@ body {
 }
 
 .cards__text {
-  max-height: 145px;
-  overflow: auto;
   font-weight: lighter;
+  padding-bottom: 30px;
 }
 
 .cards__btn {
@@ -324,8 +326,7 @@ body {
 }
 
 .aside {
-  max-width: 210px;
-  width: 100%;
+  flex: 0 2 150px;
   padding-top: 10px;
 }
 
@@ -344,10 +345,10 @@ body {
   justify-content: center;
   background-color: lightseagreen;
   padding: 15px;
-  flex-shrink: 0;
+  flex: 0 0 auto;
 }
 
-@media all and (min-width: 320px) {
+@media (min-width: 320px) {
   .main {
     display: flex;
     flex-wrap: wrap;
@@ -358,8 +359,7 @@ body {
   }
 
   .cards__item {
-    min-width: 70%;
-    max-width: 310px;
+    min-width: 80%;
   }
 
   .aside {
@@ -377,7 +377,7 @@ body {
 }
 /* END @media min-320px */
 
-@media all and (min-width: 767px) {
+@media (min-width: 767px) {
   .main {
     display: flex;
     flex-wrap: wrap;
@@ -389,7 +389,6 @@ body {
 
   .cards__item {
     min-width: 45%;
-    max-width: 300px;
   }
 
   .aside {
@@ -407,20 +406,20 @@ body {
 }
 /* END @media min-767px */
 
-@media all and (min-width: 1199px) {
+@media (min-width: 1200px) {
   .main {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
+    height: 100%;
+    flex: 1 0 auto;
   }
 
   .cards__item {
-    min-width: 32.333%;
-    max-width: 300px;
+    min-width: 29%;
   }
 
   .aside {
-    /* min-width: 100%; */
     min-width: 210px;
   }
 
