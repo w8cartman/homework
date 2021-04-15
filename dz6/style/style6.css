@@ -93,7 +93,6 @@ body {
   }
 
   .main {
-    /* display: flex; */
     padding-top: 59px;
   }
 
@@ -193,12 +192,11 @@ body {
 }
 
 .main__content {
-  flex-grow: 1;
   margin-bottom: 20px;
   font-weight: bold;
 }
 
-.main__content p:nth-of-type(1) {
+.main__content > p {
   font-weight: lighter;
   margin: 20px;
 }
@@ -224,7 +222,6 @@ body {
   margin: 10px 15px 10px 10px;
   max-width: 600px;
   min-height: 400px;
-  position: relative;
   border: 2px solid gray;
   border-radius: 25px;
   transition: all 0.4s ease;
@@ -254,15 +251,11 @@ body {
 
 .cards__text {
   font-weight: lighter;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  flex: 1;
 }
 
 .cards__btn {
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  transform: translate(-50%);
-
   padding: 6px 16px;
   border: none;
   border-radius: 15px;
