@@ -1,3 +1,8 @@
 .logo-wrap img {
   width: 170px;
 }
+
+.img-wrapper img {
+  max-width: 10rem;
+  border-radius: 15px;
+}
