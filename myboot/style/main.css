@@ -1,8 +1,10 @@
 .logo-wrap img {
-  width: 170px;
+  width: 200px;
 }
 
 .img-wrapper img {
-  max-width: 10rem;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
   border-radius: 15px;
 }
